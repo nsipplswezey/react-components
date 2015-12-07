@@ -1,4 +1,4 @@
-# react_components
+# react-components
 A Repository for Storing, Testing and Demoing My React Components
 
 # Rendering

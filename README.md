@@ -17,6 +17,9 @@ Karma works beautifully.
 ```karma start``` or ```npm test```
 
 # Inspiration and Styling
+
+One is a **static chart** react component using paths-js and inline styling. This is inspired by a [blog post](https://viget.com/extend/visualization-is-for-sharing-using-react-for-portable-data-visualization) on isomorphic react plots that are intended to arrive to the client pre-rendered, with a server route for downloading the plot, so that it can easily be included in a report. Great idea, great blogpost.
+
 One is a set of **click-based** react components using bootstrap css, vaguely inspired by the react-bootstrap library. Uses the flux pattern to manage component state. Uses immutable js for undo-redo. TODO: Bring over the immutable stuff from the other project.
 
 Another is a set of **scroll-based** interactions, based on a refactoring of Mike Bostock's scroll driven interface for image, video and text conent + nyt page styling. This one is interesting because as a user, I percieve the react onScroll synthetic event to be slower/jankier than Mike's d3 event loop implementation. TODO: figure out why. I'm sure there's a great interesting reason for this that will lead to a beautiful react optoimization. 

@@ -50,7 +50,7 @@ var Radar = React.createClass({
         { paths.rings.map(this.getRing) }
         <g opacity="0.6">
 	        { paths.curves.map(this.getCurve)  }
-	       </g>
+	      </g>
       </g>
      );
   }

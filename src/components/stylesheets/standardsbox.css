@@ -29,7 +29,7 @@ h3 {
     width: 100%;
     height: 370px;
     top:0px;
-    background-image: url(Images/HeaderBackground.png);
+    /*background-image: url(Images/HeaderBackground.png);*/
     background-repeat: repeat-x;
 }
 
@@ -48,7 +48,7 @@ h3 {
     height: 337px;
     left:19px;
     top:0px;
-    background-image: url(Images/HeaderTitle.png);
+    /*background-image: url(Images/HeaderTitle.png);*/
     background-repeat: no-repeat;
 }
 
@@ -124,7 +124,7 @@ span.sidenote {
 .separator {
     width: 100%;
     height: 77px;
-    background-image: url(Images/Separator.png);
+    /*background-image: url(Images/Separator.png);*/
     background-repeat: repeat-x;
     margin-top:30px;
     margin-bottom:-30px;

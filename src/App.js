@@ -25,6 +25,7 @@ export class App extends Component {
           <br />
           <Chart data={RadarData} />
         </div>
+
       <StandardsBox />
 
       <div style={{height:'600px'}} />

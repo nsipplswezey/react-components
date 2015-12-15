@@ -5,19 +5,21 @@ import React, {
   Component
 } from 'react';
 
+import PureRenderMixin from 'react-addons-pure-render-mixin';
+
 import ReactDOM from 'react-dom';
 import d3 from 'd3';
 
 //TODO: Clean this all up!
 //TODO: Continue improving scroll efficiency. Still some jank.
 //Deep dive into d3 event emmiter model as an alternative to the debouncinging of the scroll event
+//TODO: Page has some major slow-load issues. Especially in firefox.
+
+
+
+//TODO:DONE(spacer div, rather than dynamically setting the top) Figure out how to style this component so it doesn't require a bunch of <br> to be composed modularly
+//TODO:DONE Refactor so that the mock data is in the data directory and passed into the main component
 //TODO:DONE Make this work for images, replace the last video with 4 images: glacier and rim fire
-
-
-//TODO: Figure out how to style this component so it doesn't require a bunch of <br> to be composed modularly
-
-//TODO: Refactor so that the mock data is in the data directory and passed into the main component
-
 
 var mute = false,
     muteVolume = "volume",
@@ -72,8 +74,6 @@ var VideoContent = React.createClass({
   }
 
 });
-
-
 
 
 var ScrollPrompt = React.createClass({
@@ -664,6 +664,8 @@ var VideoCaption = React.createClass({
     });
 
     var ScrollBox = React.createClass({
+      mixins : [PureRenderMixin],
+
       render : function(){
         return(
           <div className="main">

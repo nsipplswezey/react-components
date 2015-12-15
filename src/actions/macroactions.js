@@ -15,6 +15,14 @@ var MacroActions = {
       macro: macro
     });
 
+  },
+  incrementMacro: function(increment,macro){
+    AppDispatcher.handleViewAction({
+      actionType: MacroConstants.MACRO_INCREMENT,
+      increment: increment,
+      macro: macro
+    });
+
   }
 
 };

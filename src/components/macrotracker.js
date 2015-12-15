@@ -35,7 +35,7 @@ var MacroTracker = React.createClass({
   },
 
   componentWillUnmount: function(){
-    //MacroStore.removeChangeListener(this._onChange);
+    MacroStore.removeChangeListener(this._onChange);
 
   },
 

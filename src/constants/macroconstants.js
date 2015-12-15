@@ -4,5 +4,6 @@ var keyMirror = require('keymirror');
 
 module.exports = keyMirror({
   MACRO_UPDATE: null,
+  MACRO_INCREMENT: null
 
 });

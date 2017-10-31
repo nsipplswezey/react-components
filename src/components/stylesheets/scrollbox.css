@@ -15,11 +15,11 @@ body {
         }
 
         .article {
-            border-top: solid 1px #000;
+            /* border-top: solid 1px #000; */
         }
 
         .section {
-            margin-top: 150px;
+            /* margin-top: 150px; */
         }
 
         .section:after {
@@ -201,7 +201,7 @@ body {
         }
 
         .video-sequence:first-child {
-            margin-top: 40px;
+            /* margin-top: 40px; */
         }
 
         .video-sequence .video {

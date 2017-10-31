@@ -15,8 +15,6 @@ import d3 from 'd3';
 //Deep dive into d3 event emmiter model as an alternative to the debouncinging of the scroll event
 //TODO: Page has some major slow-load issues. Especially in firefox.
 
-
-
 //TODO:DONE(spacer div, rather than dynamically setting the top) Figure out how to style this component so it doesn't require a bunch of <br> to be composed modularly
 //TODO:DONE Refactor so that the mock data is in the data directory and passed into the main component
 //TODO:DONE Make this work for images, replace the last video with 4 images: glacier and rim fire
@@ -383,8 +381,8 @@ var VideoCaption = React.createClass({
         }
 
         var opacityTop = this.state.rect.top - fixHeight / 4,
-            opacity = opacityTop > fixTop + fixHeight * 4 / 5 ? 0 //previous video fully opaque
-        : !this.props.last && opacityTop < fixTop - fixHeight ? 0 //next video fully covers this video
+            opacity = opacityTop > fixTop + fixHeight * 4 / 5 - 200 ? 0 //previous video fully opaque
+        : !this.props.last && opacityTop < fixTop - fixHeight - 200 ? 0 //next video fully covers this video
         : opacityTop < fixTop ? 1  //this video fully opaque, but may be covered by next video
         : Math.max(0, Math.min(1,1 - (opacityTop - fixTop) / (fixHeight / 5))); //this video partiall opaque
 
@@ -395,7 +393,16 @@ var VideoCaption = React.createClass({
             opacity : opacityTop >= fixTop - fixHeight ? 1 : 0
           });
 
+          //opacity last
+        } else if (this.props.last) {
+
+
+          this.setState({
+            opacity : opacityTop >= fixTop - fixHeight ? 1 : 0
+          });
+
         } else {
+
 
           this.setState({
             opacity : opacity
@@ -403,11 +410,6 @@ var VideoCaption = React.createClass({
 
         }
 
-        //opacity last
-        if (this.props.last){
-
-
-        }
 
         this.setState(
           {rect : ReactDOM.findDOMNode(this).getBoundingClientRect(),

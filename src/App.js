@@ -20,17 +20,24 @@ export class App extends Component {
   render () {
     return (
       <div>
+
+        <ScrollBox data={ScrollboxData}/>
+
+        <StandardsBox />
+
+        <div style={{height:'400px'}} />
+
         <div style={{textAlign:'center'}}>
           <MacroTracker />
           <br />
+
+          <div style={{height:'300px'}} />
+
           <Chart data={RadarData} />
         </div>
 
-      <StandardsBox />
+        <div style={{height:'300px'}} />
 
-      <div style={{height:'600px'}} />
-
-      <ScrollBox data={ScrollboxData}/>
       </div>
     );
   }
